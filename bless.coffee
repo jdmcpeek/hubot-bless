@@ -1,8 +1,8 @@
-description:
+# Description:
 #   Allows Hubot to bless someone after they sneeze. Thanks, Hubot. 
 #
 # Dependencies:
-#   "cheerio: "0.7.0"
+#   None
 #
 # Configuration:
 #   None
@@ -13,20 +13,23 @@ description:
 # Author:
 #   jdmcpeek
 
-cheerio = require('cheerio')
+
+blesses = {
+  "English" => "God Bless you",
+  "German" => ""
+}
+
 
 module.exports = (robot) ->
-  robot.respond /insult (.*)/i, (msg) ->
-    name = msg.match[1].trim()
-    insult(msg, name)
+  robot.respond /bless (.*)/i, (blessing) ->
+    name = blessing.match[1].trim()
+    bless(blessing, name)
 
-insult = (msg, name) ->
+bless = (blessing, name, language) ->
   msg
     .http("http://www.randominsults.net")
     .header("User-Agent: Insultbot for Hubot (+https://github.com/github/hubot-scripts)")
     .get() (err, res, body) ->
       msg.send "#{name}: #{getQuote body}"
 
-getQuote = (body) ->
-  $ = cheerio.load(body)
-  $('i').text()
+
