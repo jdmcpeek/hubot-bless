@@ -15,8 +15,22 @@
 
 
 blesses = {
-  "English" => "God Bless you",
-  "German" => ""
+  English: "God Bless you",
+  Albanian: "Shëndet",
+  Afrikaans: "Gesondheid",
+  Arabic: "صحة",
+  Armenian: "առողջություն",
+  Basque: "Doministiku'",
+  Bosnian: "Nazdravlje",
+  Bulgarian: "Наздраве",
+  Catalan: "Salut",
+  Cantonese: "大吉利事", 
+  Chinese: "长命百岁",
+  Croation: "Na zdravlje",
+  Czech: "Na zdraví",
+  Danish: "Prosit",
+   
+
 }
 
 
