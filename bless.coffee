@@ -8,7 +8,7 @@
 #   None
 #
 # Commands:
-#   hubot bless <name> - hubot bless <name> in <language>
+#   hubot bless <name> in <language>
 #
 # Author:
 #   jdmcpeek
@@ -131,9 +131,15 @@ String::capitalize = ->
 
 
 module.exports = (robot) ->
-  robot.respond /bless (.*) in (.*)/i, (msg) -> 
+  robot.respond /bless (.*)/i, (msg) -> 
       name = msg.match[1].trim().capitalize()
-      language = msg.match[2].trim().capitalize()
+      language = msg.random translations
+      msg.send "#{blessings[language]}, #{name}!"
+      msg.emote "#{name} feels a bit better now."
+  
+  robot.respond /in (.*) bless (.*)/i, (msg) -> 
+      name = msg.match[2].trim().capitalize()
+      language = msg.match[1].trim().capitalize()
       msg.send "#{blessings[language]}, #{name}!"
       msg.emote "#{name} feels a bit better now."
     
