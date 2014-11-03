@@ -39,7 +39,7 @@ blesses = {
   Hawaiian: "a mauli ola",
   Hebrew: "לבריאות",
   Hindi: "हरी ॐ",
-  Hungarian: "Egészségedre!",
+  Hungarian: "Egészségedre",
   Indonesian: "Alhamdulillah",
   Irish: "Dia linn",
   Japanese: "お大事に",
@@ -52,7 +52,7 @@ blesses = {
   Nepali: "ʼचिरन्जिभी",
   Norwegian: "Prosit",
   Persian: "عافیت باشه",
-  Polish: "Na zdrowie!",
+  Polish: "Na zdrowie",
   Portuguese: "Santinho",
   Romanian: "Sănătate",
   Russian: "будь здоров",
@@ -72,15 +72,15 @@ blesses = {
 
 
 module.exports = (robot) ->
-  robot.respond /bless (.*)/i, (blessing) ->
-    name = blessing.match[1].trim()
-    bless(blessing, name)
+  robot.respond /bless (.*) in (.*)/i, (msg) ->
+    name = msg.match[1].trim()
+    language = msg.match[3].trim()
+    bless(msg, name, language)
+    
 
-bless = (blessing, name, language) ->
-  msg
-    .http("http://www.randominsults.net")
-    .header("User-Agent: Insultbot for Hubot (+https://github.com/github/hubot-scripts)")
-    .get() (err, res, body) ->
-      msg.send "#{name}: #{getQuote body}"
+
+bless = (msg, name, language = English) ->
+  msg.send "#{blesses[language]}, #{name}!"
+    
 
 
