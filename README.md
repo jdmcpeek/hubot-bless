@@ -11,6 +11,6 @@ Now that cold season is upon us, it's high time we automate our 'bless you's" an
 `hubot in <language> bless <name>`
   returns
 `<language blessing>, <name>!`
-  Ex: Salud, Davie!
+  Ex: "Salud, Davie!"
   
   Everyone always feels better after they've been blessed. 
