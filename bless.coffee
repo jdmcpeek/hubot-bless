@@ -126,27 +126,19 @@ translations = [
   "זײַ געזונט"
 ]
 
-
-module.exports = (robot) ->
-  robot.respond /bless (.*) in (.*)/i, (msg) ->
-    name = msg.match[1].trim().capitalize()
-    language = msg.match[2].trim().capitalize()
-    msg.send "#{blessings[language]}, #{name}!"
-    msg.emote "#{name} feels a bit better now."
-
-  robot.respond /bless (.*)/i, (msg) ->
-    name = msg.match[1].trim().capitalize()
-    translate = msg.random translations
-    msg.send "#{translate}, #{name}"
-    msg.emote "#{name} feels a bit better now."
-
 String::capitalize = ->
   @charAt(0).toUpperCase() + @slice(1)
 
-# randomLanguage = (obj) ->
-#   tmpList = Object.keys(obj)
-#   randomTranslation = tmpList[Math.floor(Math.random() * tmpList.length)]
-#   propertyValue = obj[randomTranslation]
+
+module.exports = (robot) ->
+  robot.respond /bless (.*) in (.*)/i, (msg) -> 
+      name = msg.match[1].trim().capitalize()
+      language = msg.match[2].trim().capitalize()
+      msg.send "#{blessings[language]}, #{name}!"
+      msg.emote "#{name} feels a bit better now."
+    
+
+
 
     
 
