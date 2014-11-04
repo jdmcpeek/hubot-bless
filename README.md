@@ -1,4 +1,24 @@
-hubot-bless
-===========
+# hubot-bless
 
-Now that cold season is upon us, it's high time we automate our 'bless you's" and "Gezundheit's".  
+A hubot script that blesses and of the poor, sneezing souls
+
+See [`src/bless.coffee`](src/bless.coffee) for full documentation.
+
+## Installation
+
+In hubot project repo, run:
+
+`npm install hubot-bless --save`
+
+Then add **hubot-bless** to your `external-scripts.json`:
+
+```json
+["hubot-bless"]
+```
+
+## Sample Interaction
+
+```
+user1>> hubot hello
+hubot>> hello!
+```
