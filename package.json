@@ -2,7 +2,7 @@
   "name": "hubot-bless",
   "description": "A hubot script that blesses and of the poor, sneezing souls",
   "version": "0.0.0",
-  "author": "jdmcpeek <david.mcpeek@yale.edu>",
+  "author": "David McPeek <josedmcpeek@gmail.com> (https://github.com/jdmcpeek)",
   "license": "MIT",
 
   "keywords": ["hubot","bless","hubot-scripts"],
