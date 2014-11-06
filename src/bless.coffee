@@ -8,7 +8,7 @@
 #   None
 #
 # Commands:
-#   hubot bless <name> in <language>
+#   hubot bless <name> - hubot in <language> bless <name>
 #
 # Author:
 #   jdmcpeek
