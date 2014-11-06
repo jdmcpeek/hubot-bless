@@ -25,11 +25,11 @@
 19 verbose request resolving registry [ 'https://registry.npmjs.org/', './hubot-bless' ]
 20 verbose request after pass 2, where is https://registry.npmjs.org/hubot-bless
 21 verbose request no auth needed
-22 info attempt registry request try #1 at 18:03:18
-23 verbose request id 16e96e87d095b010
+22 info attempt registry request try #1 at 19:39:31
+23 verbose request id 57249c5ce74d51f8
 24 http request GET https://registry.npmjs.org/hubot-bless
 25 http 404 https://registry.npmjs.org/hubot-bless
-26 verbose headers { date: 'Wed, 05 Nov 2014 23:03:19 GMT',
+26 verbose headers { date: 'Thu, 06 Nov 2014 00:39:32 GMT',
 26 verbose headers   server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
 26 verbose headers   'content-type': 'application/json',
 26 verbose headers   'cache-control': 'max-age=0',
@@ -37,14 +37,14 @@
 26 verbose headers   'accept-ranges': 'bytes',
 26 verbose headers   via: '1.1 varnish',
 26 verbose headers   age: '0',
-26 verbose headers   'x-served-by': 'cache-atl6234-ATL',
+26 verbose headers   'x-served-by': 'cache-jfk1025-JFK',
 26 verbose headers   'x-cache': 'MISS',
 26 verbose headers   'x-cache-hits': '0',
-26 verbose headers   'x-timer': 'S1415228599.482394,VS0,VE49',
+26 verbose headers   'x-timer': 'S1415234371.995856,VS0,VE17',
 26 verbose headers   'keep-alive': 'timeout=10, max=50',
 26 verbose headers   connection: 'Keep-Alive' }
 27 silly registry.get cb [ 404,
-27 silly registry.get   { date: 'Wed, 05 Nov 2014 23:03:19 GMT',
+27 silly registry.get   { date: 'Thu, 06 Nov 2014 00:39:32 GMT',
 27 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
 27 silly registry.get     'content-type': 'application/json',
 27 silly registry.get     'cache-control': 'max-age=0',
@@ -52,10 +52,10 @@
 27 silly registry.get     'accept-ranges': 'bytes',
 27 silly registry.get     via: '1.1 varnish',
 27 silly registry.get     age: '0',
-27 silly registry.get     'x-served-by': 'cache-atl6234-ATL',
+27 silly registry.get     'x-served-by': 'cache-jfk1025-JFK',
 27 silly registry.get     'x-cache': 'MISS',
 27 silly registry.get     'x-cache-hits': '0',
-27 silly registry.get     'x-timer': 'S1415228599.482394,VS0,VE49',
+27 silly registry.get     'x-timer': 'S1415234371.995856,VS0,VE17',
 27 silly registry.get     'keep-alive': 'timeout=10, max=50',
 27 silly registry.get     connection: 'Keep-Alive' } ]
 28 verbose stack Error: 404 Not Found: hubot-bless
