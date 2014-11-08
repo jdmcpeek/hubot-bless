@@ -1,7 +1,7 @@
 {
   "name": "hubot-bless",
   "description": "A hubot script that blesses the poor, sneezing souls in languages spanning the globe",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "David McPeek <josedmcpeek@gmail.com> (https://github.com/jdmcpeek)",
   "license": "MIT",
 
