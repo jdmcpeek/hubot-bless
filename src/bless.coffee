@@ -8,7 +8,7 @@
 #   None
 #
 # Commands:
-#   hubot bless <name> - hubot in <language> bless <name>
+#   hubot bless <name> in <language>
 #
 # Author:
 #   jdmcpeek
@@ -70,6 +70,7 @@ blessings = {
   "Yiddish": "זײַ געזונט"
 }
 
+
 translations = [
   "God Bless you",
   "Shëndet",
@@ -129,19 +130,24 @@ translations = [
 String::capitalize = ->
   @charAt(0).toUpperCase() + @slice(1)
 
+in_blessings (language) = -> 
+  for english, trans in blessings
+    if language in english
+      true
+    else 
+      false
+
 
 module.exports = (robot) ->
-  robot.respond /bless (.*)/i, (msg) -> 
+  robot.respond /bless (.*) in (.*)/i, (msg) -> 
       name = msg.match[1].trim().capitalize()
-      language = msg.random translations
-      msg.send "#{blessings[language]}, #{name}!"
-      msg.emote "#{name} feels a bit better now."
-  
-  robot.respond /in (.*) bless (.*)/i, (msg) -> 
-      name = msg.match[2].trim().capitalize()
-      language = msg.match[1].trim().capitalize()
-      msg.send "#{blessings[language]}, #{name}!"
-      msg.emote "#{name} feels a bit better now."
+      language = msg.match[2].trim().capitalize()
+      if in_blessings(language) 
+        msg.send "#{blessings[language]}, #{name}!"
+        msg.emote "#{name} feels a bit better now."
+      else 
+        msg.send msg.random translations
+        msg.emote "Hubot retreats in his ignorance and shame."
     
 
 
